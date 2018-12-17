@@ -103,13 +103,13 @@ if __name__ == "__main__":
 
                             # create combination id
                             if firstGroup.x2 <= secondGroup.x1:
-                                combId = firstGroup.id + "," + secondGroup.id
+                                combId = "(" + firstGroup.id + "," + secondGroup.id + ")"
                             elif firstGroup.x1 >= secondGroup.x2:
-                                combId = secondGroup.id + "," + firstGroup.id
+                                combId = "(" + secondGroup.id + "," + firstGroup.id + ")"
                             elif firstGroup.y2 <= secondGroup.y1:
-                                combId = firstGroup.id + "/" + secondGroup.id
+                                combId = "(" + firstGroup.id + "/" + secondGroup.id + ")"
                             else:
-                                combId = secondGroup.id + "/" + firstGroup.id
+                                combId = "(" + secondGroup.id + "/" + firstGroup.id + ")"
 
                             # append combination to groupOutList
                             bounding = findBounding (firstGroup, secondGroup)
